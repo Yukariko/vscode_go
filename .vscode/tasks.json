@@ -11,6 +11,13 @@
             "taskName": "go",
             "args": ["run", "${file}", "<", "${workspaceRoot}/input.txt"],
             "isBuildCommand": true
+        },
+        {
+            "taskName": "g++",
+            "args": ["-std=c++14", "-O2", "${file}", "-o", "test", "&&", "test", "<", "input.txt"],
+            "isTestCommand": true
         }
     ]
 }
+
+//, "<", "${workspaceRoot}/input.txt"
