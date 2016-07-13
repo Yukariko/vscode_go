@@ -2,8 +2,15 @@
     // See https://go.microsoft.com/fwlink/?LinkId=733558
     // for the documentation about the tasks.json format
     "version": "0.1.0",
-    "command": "echo",
+    "command": "cmd",
     "isShellCommand": true,
-    "args": ["Hello World"],
-    "showOutput": "always"
+    "args": ["/C"],
+    "showOutput": "always",
+    "tasks": [
+        {
+            "taskName": "go",
+            "args": ["run", "${file}", "<", "${workspaceRoot}/input.txt"],
+            "isBuildCommand": true
+        }
+    ]
 }

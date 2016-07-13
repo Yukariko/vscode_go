@@ -6,7 +6,7 @@
             "type": "go",
             "request": "launch",
             "mode": "debug",
-            "program": "${GOPATH}/bin",
+            "program": "${file}",
             "env": {},
             "args": []
         }
